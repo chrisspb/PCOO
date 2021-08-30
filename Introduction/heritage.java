@@ -1,24 +1,5 @@
-//https://stackoverflow.com/questions/10839131/implements-vs-extends-when-to-use-whats-the-difference
-
 public class ExtendsAndImplementsDemo{
     public static void main(String args[]){
-
-        Dog dog = new Dog("Tiger",16);
-        Cat cat = new Cat("July",20);
-
-        System.out.println("Dog:"+dog);
-        System.out.println("Cat:"+cat);
-
-        dog.remember();
-        dog.protectOwner();
-        Learn dl = dog;
-        dl.learn();
-
-        cat.remember();
-        cat.protectOwner();
-
-        Climb c = cat;
-        c.climb();
 
         Man man = new Man("Ravindra",40);
         System.out.println(man);
@@ -53,35 +34,8 @@ abstract class Animal{
         return this.getClass().getSimpleName()+":"+name+":"+lifeExpentency;
     }
 }
-class Dog extends Animal implements Learn{
 
-    public Dog(String name,int age){
-        super(name,age);
-    }
-    public void remember(){
-        System.out.println(this.getClass().getSimpleName()+" can remember for 5 minutes");
-    }
-    public void protectOwner(){
-        System.out.println(this.getClass().getSimpleName()+ " will protect owner");
-    }
-    public void learn(){
-        System.out.println(this.getClass().getSimpleName()+ " can learn:");
-    }
-}
-class Cat extends Animal implements Climb {
-    public Cat(String name,int age){
-        super(name,age);
-    }
-    public void remember(){
-        System.out.println(this.getClass().getSimpleName() + " can remember for 16 hours");
-    }
-    public void protectOwner(){
-        System.out.println(this.getClass().getSimpleName()+ " won't protect owner");
-    }
-    public void climb(){
-        System.out.println(this.getClass().getSimpleName()+ " can climb");
-    }
-}
+
 interface Climb{
     public void climb();
 }
@@ -120,3 +74,15 @@ class Man implements Think,Learn,Apply,Climb{
         return "Man :"+name+":Age:"+age;
     }
 }
+
+// TODO
+/*
+
+Créer une class Dog qui peut apprendre, dont le constructeur prend en param un nom et un age,
+Dont les fonctions remember, protectOwner et learn sortent Respectivement
+Dog can remember for 5 minutes
+Dog will protect owner
+Dog can learn
+(Utiliser le simpleName de la classe plutôt que "Dog" directement)
+
+*/
