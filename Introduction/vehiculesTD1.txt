@@ -1,0 +1,19 @@
+Un collectionneur veut gérer la liste des véhicules qu’il possède. Il collectionne différents types de
+véhicules : des autos, des motos et des camions. Pour chaque véhicule, il veut conserver sa marque,
+son modèle et sa couleur (exemple Renault Clio rouge...). Il désire :
+
+afficher la liste des noms des véhicules qu’il possède,
+afficher tous les véhicules d’une couleur donnée
+rechercher s’il possède ou non un véhicule d’une certaine marque et d’un certain modèle.
+Vendre un véhicule
+
+1) Proposer une solution orientée objet permettant de représenter tous les véhicules possibles.
+Comment gérer le type du véhicule ? 
+
+2) Implanter sous Eclipse en Java la solution à base d’héritage et tester tout d’abord les classes que vous avez imaginées en instanciant différents objets de votre choix (avec les constructeurs) pour chacune de celles-ci.
+
+3) Le collectionneur ne connaît pas a priori le nombre de véhicules qu’il va posséder. Utilisez les
+collections et notamment les ArrayList pour mettre des éléments (véhicules) dans cette liste et
+pour l’afficher avec et sans itérateurs.
+
+4) Créer une classe qui hérite de ArrayList pour pouvoir efficacement répondre aux questions b, c et d.
