@@ -1,3 +1,56 @@
+EXERCICE 1.
+
+on veut écrire un programme simulant des poupées russes de di#érentes tailles. Chaque
+poupée a une taille donnée, peut s'ouvrir ou se fermer, peut contenir une autre poupée et être contenue
+dans une autre poupée.
+Écrivez une classe PoupeeRusse contenant les méthodes suivantes :
+- un constructeur
+- void ouvrir() : ouvre la poupée si elle n'est pas déjà ouverte et si elle ne se trouve pas à
+l'intérieur d'une autre poupée
+- void fermer() : ferme la poupée si elle n'est pas déjà fermée et si elle ne se trouve pas à
+l'intérieur d'une autre poupée
+- void placerDans(PoupeeRusse p) : place la poupée courante dans la poupée p si c'est
+possible. Il faut que la poupée courante soit fermée et ne soit pas déjà dans une autre poupée,
+que la poupée p soit ouverte et ne contienne aucune poupée, et que p soit d'une taille supérieure
+à la poupée courante.
+- void sortirDe(PoupeeRusse p) : sort la poupée courante de la poupée p si elle est dans p
+et si p est ouverte.
+
+
+
+EXERCICE 2.
+on veut développer un logiciel pour générer des sujets d'examen. Un programmeur a
+écrit la classe suivante avant de démissionner (il a gagné au loto). Vous devez continuer le
+développement.
+class Question{
+ String enonce;
+ int difficulte=50; // la difficulte varie de 0 à 100
+ Question(String e){
+ this.enonce = e;
+ }
+ void setDifficulte(int d){
+ this.difficulte = d;
+ }
+ int getDifficulte(){
+ return this.difficulte;
+ }
+ String getEnonce(){
+ return this.enonce;
+ }
+}
+On veut représenter les questions de QCM (Questionnaire à Choix Multiples). Chaque question
+à choix multiple a, en plus d'un énoncé et d'une difficulté, un ensemble de réponses possibles, chaque
+réponse ayant un énoncé et une valeur de vérité (une réponse peut être vraie ou fausse).
+a. Proposez du code pour représenter les questions à choix multiples.
+b. Un sujet d'examen est une liste de questions (de QCM ou autre) avec un barême. Chaque
+question du sujet a donc un nombre de points. Sans modifier les classes que vous avez écrites avant,
+écrivez du code objet pour représenter les sujets, avec en particulier une méthode qui permet d'obtenir
+la difficulté moyenne du sujet. La difficulté moyenne est la somme des difficultés des questions du
+sujet, divisée par le nombre de questions. 
+
+
+EXERCICE 3.
+
 Un collectionneur veut gérer la liste des véhicules qu’il possède. Il collectionne différents types de
 véhicules : des autos, des motos et des camions. Pour chaque véhicule, il veut conserver sa marque,
 son modèle et sa couleur (exemple Renault Clio rouge...). Il désire :
